@@ -41,14 +41,13 @@ cp services/home-assistant@homeassistant.service /etc/systemd/system/
 sudo systemctl --system daemon-reload
 sudo systemctl enable home-assistant@homeassistant
 
-# install display driver
-# chmod -R 755 LCD-show
-# bash LCD-show/LCD35-show
-
 # register rd1 service
 cp services/rd1.service /etc/systemd/system/
 sudo systemctl --system daemon-reload
 sudo systemctl enable rd1
 
+# install display driver
+chmod -R 755 LCD-show
+bash LCD-show/LCD35-show
 
-
+reboot
