@@ -1,22 +1,25 @@
-#!/bin/bash
-PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-export PATH
+#!/usr/bin/env bash
 # step 1: login to dietpi and setup internet connection
 # step 2: run this file
+
+
 # install docker
 /boot/dietpi/dietpi-software install 162 || exit 1
 # install avahi
 /boot/dietpi/dietpi-software install 152 || exit 1
 # install chromium
 /boot/dietpi/dietpi-software install 113 || exit 1
-
+#install fbi
+sudo apt-get install -y fbi
 
 # pull rd1-app
-docker pull eu.gcr.io/rd1-build/rd1-app:arm &
+docker pull eu.gcr.io/rd1-build/rd1-app:arm || exit 1  &
+# pull rd1-dashboard
+docker pull eu.gcr.io/rd1-build/rd1-dashboard:arm || exit 1  &
 # pull rd1-owserver
-docker pull eu.gcr.io/rd1-build/rd1-owserver:arm &
+docker pull eu.gcr.io/rd1-build/rd1-owserver:arm || exit 1 &
 # pull mqtt
-docker pull eclipse-mosquitto:latest &
+docker pull eclipse-mosquitto:latest || exit 1 &
 #setup rd1 service
 wait
 
@@ -33,11 +36,18 @@ source bin/activate
 python3 -m pip install wheel
 pip3 install homeassistant
 
-cp services/home-assistant@homeassistant.service /etc/systemd/system/home-assistant@homeassistant.service
+cp services/home-assistant@homeassistant.service /etc/systemd/system/
 sudo systemctl --system daemon-reload
 sudo systemctl enable home-assistant@homeassistant
 
 # install display driver
-#chmod -R 755 LCD-show
-#bash LCD-show/LCD35-show
+# chmod -R 755 LCD-show
+# bash LCD-show/LCD35-show
+
+# register rd1 service
+cp services/rd1.service /etc/systemd/system/
+sudo systemctl --system daemon-reload
+sudo systemctl enable rd1
+
+
 

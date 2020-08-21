@@ -1,0 +1,14 @@
+[Unit]
+Description=RD1
+# Order 4
+Requisite=rd1.service
+After=rd1.service
+
+[Service]
+Type=idle
+RemainAfterExit=no
+StandardOutput=tty
+ExecStart=/bin/dash -c '/root/rd1-boot/run.sh 2>&1 | tee /tmp/rd1-run.log'
+
+[Install]
+WantedBy=multi-user.target
