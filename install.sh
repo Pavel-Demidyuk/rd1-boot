@@ -1,5 +1,5 @@
 #!/bin/bash
-
+PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # step 1: login to dietpi and setup internet connection
 # step 2: run this file
 
