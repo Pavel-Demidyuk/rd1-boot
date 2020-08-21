@@ -4,11 +4,11 @@
 # step 2: run this file
 
 # install docker
-dietpi-software install 162
+dietpi-software install 162 || exit 1
 # install avahi
-dietpi-software install 152
+dietpi-software install 152 || exit 1
 # install chromium
-dietpi-software install 113
+dietpi-software install 113 || exit 1
 
 
 # pull rd1-app
@@ -17,7 +17,6 @@ docker pull eu.gcr.io/rd1-build/rd1-app:arm
 docker pull eu.gcr.io/rd1-build/rd1-owserver:arm
 # pull mqtt
 docker pull eclipse-mosquitto:latest
-
 #setup rd1 service
 
 
