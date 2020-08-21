@@ -4,10 +4,8 @@ echo "starting custom rd1 scripts from /root/rd1-boot/custom.sh"
 echo "Starting to load RD1 CUSTOM.SH"
 fbi -a --noverbose -T 1 /root/rd1-boot/loading_images/loading1.png
 #bash /root/rd1-boot/bash/resize.sh ; sleep 1
-
 fbi -a --noverbose -T 1 /root/rd1-boot/loading_images/loading2.png
 bash /root/rd1-boot/bash/dashboard.sh
-
 fbi -a --noverbose -T 1 /root/rd1-boot/loading_images/loading3.png
 bash /root/rd1-boot/bash/services/owserver_run.sh
 fbi -a --noverbose -T 1 /root/rd1-boot/loading_images/loading4.png

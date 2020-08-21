@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-name='rd1-app'
+name=rd1-app
+image=eu.gcr.io/rd1-build/$name:arm
+docker pull
 docker stop $name && echo $name 'service stopped'
 docker kill $name && echo $name 'service killed'
 docker rm $name && echo $name 'service removed'
@@ -20,4 +22,4 @@ docker run -d --name=$name \
 	--health-timeout=10s \
 	--health-retries=3 \
 	--health-interval=2m \
-	paveldemidyuk/rd1-app:arm && echo $name 'service started'
+	$image && echo $name 'service started'

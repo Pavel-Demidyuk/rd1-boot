@@ -20,11 +20,12 @@ docker pull eu.gcr.io/rd1-build/rd1-dashboard:arm || exit 1  &
 docker pull eu.gcr.io/rd1-build/rd1-owserver:arm || exit 1 &
 # pull mqtt
 docker pull eclipse-mosquitto:latest || exit 1 &
-#setup rd1 service
+# pull nodered
+docker pull nodered/node-red:latest || exit 1 &
 wait
 
 #setup hassio
-sudo apt-get install python3 python3-dev python3-venv python3-pip libffi-dev libssl-dev autoconf build-essential
+sudo apt-get -y install python3 python3-dev python3-venv python3-pip libffi-dev libssl-dev autoconf build-essential
 sudo useradd -rm homeassistant -G dialout,gpio,i2c
 cd /srv
 sudo mkdir homeassistant
