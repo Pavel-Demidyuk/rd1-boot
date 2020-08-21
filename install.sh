@@ -3,7 +3,7 @@ PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PATH
 # step 1: login to dietpi and setup internet connection
 # step 2: run this file
-
+echo $PATH
 # install docker
 dietpi-software install 162 || exit 1
 # install avahi
