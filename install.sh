@@ -4,11 +4,11 @@ export PATH
 # step 1: login to dietpi and setup internet connection
 # step 2: run this file
 # install docker
-/boot/dietpi/dietpi-software install 162 || exit 1 &
+/boot/dietpi/dietpi-software install 162 || exit 1
 # install avahi
-/boot/dietpi/dietpi-software install 152 || exit 1 &
+/boot/dietpi/dietpi-software install 152 || exit 1
 # install chromium
-/boot/dietpi/dietpi-software install 113 || exit 1 &
+/boot/dietpi/dietpi-software install 113 || exit 1
 
 
 # pull rd1-app
