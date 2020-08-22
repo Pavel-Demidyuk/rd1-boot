@@ -30,7 +30,7 @@ sudo useradd -rm homeassistant -G dialout,gpio,i2c
 cd /srv
 sudo mkdir homeassistant
 sudo chown homeassistant:homeassistant homeassistant
-sudo -H homeassistant <<'EOF'
+su homeassistant <<'EOF'
 cd /srv/homeassistant
 python3 -m venv .
 source bin/activate
