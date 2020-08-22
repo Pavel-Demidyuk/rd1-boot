@@ -2,6 +2,8 @@
 # step 1: login to dietpi and setup internet connection
 # step 2: run this file
 
+TODO enable i2c
+investigate dietpi-backup
 
 # install docker
 /boot/dietpi/dietpi-software install 162 || exit 1
