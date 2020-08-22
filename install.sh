@@ -54,4 +54,5 @@
 chmod -R 755 /root/rd1-boot/LCD-show || exit 1
 cd /root/rd1-boot/LCD-show/ && ./LCD35-show || exit 1
 
-reboot
+#reboot
+#
