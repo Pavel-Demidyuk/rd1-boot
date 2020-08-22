@@ -68,5 +68,5 @@ elif [ $# -gt 1 ]; then
 echo "Too many parameters"
 fi
 
-echo "reboot now"
-sudo reboot
+#echo "reboot now"
+#sudo reboot
