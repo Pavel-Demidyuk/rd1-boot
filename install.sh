@@ -2,8 +2,8 @@
 # step 1: login to dietpi and setup internet connection
 # step 2: run this file
 
-TODO enable i2c
-investigate dietpi-backup
+#TODO enable i2c
+#investigate dietpi-backup
 
 # install docker
 /boot/dietpi/dietpi-software install 162 || exit 1
@@ -51,7 +51,7 @@ sudo systemctl --system daemon-reload
 sudo systemctl enable rd1
 
 # install display driver
-chmod -R 755 LCD-show
-bash LCD-show/LCD35-show
+chmod -R 755 LCD-show || exit 1
+bash LCD-show/LCD35-show || exit 1
 
 reboot
