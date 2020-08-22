@@ -49,7 +49,7 @@ sudo systemctl --system daemon-reload
 sudo systemctl enable rd1
 
 # install display driver
-#chmod -R 755 LCD-show
-#bash LCD-show/LCD35-show
+chmod -R 755 LCD-show
+bash LCD-show/LCD35-show
 
-#reboot
+reboot
