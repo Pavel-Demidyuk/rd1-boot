@@ -7,7 +7,11 @@
 #
 # cutt.ly stands for https://raw.githubusercontent.com/Pavel-Demidyuk/rd1-boot/master/boot.sh
 #
+# TODO:
+# 1. cleanup adfter install  (delete wifi)
+# 2. enable i2c
 
+rm -rf master* rd1*
 wget --no-check-certificate https://github.com/Pavel-Demidyuk/rd1-boot/archive/master.zip
 unzip master.zip
 rm -rf master.zip
