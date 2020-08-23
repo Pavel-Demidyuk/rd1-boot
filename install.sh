@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # step 1: login to dietpi and setup internet connection
 # step 2: run this file
+# bash -c "$(curl -sSL https://raw.githubusercontent.com/MichaIng/DietPi/master/.meta/dietpi-imager)"
 #
 ##TODO enable i2c
 ##investigate dietpi-backup
