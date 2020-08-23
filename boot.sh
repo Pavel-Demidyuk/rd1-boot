@@ -10,6 +10,7 @@
 
 wget --no-check-certificate https://github.com/Pavel-Demidyuk/rd1-boot/archive/master.zip
 unzip master.zip
+rm -rf master.zip
 mv rd1-boot-master rd1-boot
 chmod -R +x rd1-boot
 cd rd1-boot && ./install.sh
