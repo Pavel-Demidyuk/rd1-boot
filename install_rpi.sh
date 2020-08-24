@@ -4,7 +4,7 @@
 
 #TODO enable i2c
 
-sudo apt-get update && sudo apt-get upgrade || exit 1
+sudo apt-get update --yes && sudo apt-get upgrade  --yes || exit 1
 curl -fsSL https://get.docker.com -o get-docker.sh || exit 1
 sudo sh get-docker.sh || exit 1
 
