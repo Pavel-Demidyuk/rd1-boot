@@ -10,6 +10,7 @@
 # TODO:
 # 1. cleanup adfter install  (delete wifi)
 # 2. enable i2c
+# 3. [ INFO ] DietPi has detected an increased GPU memory is required for your installed software:
 
 rm -rf master* rd1*
 wget --no-check-certificate https://github.com/Pavel-Demidyuk/rd1-boot/archive/master.zip
