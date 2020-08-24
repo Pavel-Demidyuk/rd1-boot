@@ -11,3 +11,8 @@ source bin/activate
 python3 -m pip install wheel
 pip3 install homeassistant
 EOF
+
+#enable hassio service
+cp /root/rd1-boot/services/home-assistant@homeassistant.service /etc/systemd/system/
+sudo systemctl --system daemon-reload
+sudo systemctl enable home-assistant@homeassistant

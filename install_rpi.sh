@@ -27,12 +27,7 @@ docker pull nodered/node-red:latest || exit 1 &
 wait
 
 ##setup hassio
-bash hassio.sh || exit 1
-
-#enable hassio service
-cp /root/rd1-boot/services/home-assistant@homeassistant.service /etc/systemd/system/
-sudo systemctl --system daemon-reload
-sudo systemctl enable home-assistant@homeassistant
+bash install_hassio.sh || exit 1
 
 # register rd1 service
 cp /root/rd1-boot/services/rd1.service /etc/systemd/system/
@@ -43,5 +38,4 @@ sudo systemctl enable rd1
 chmod -R 755 /root/rd1-boot/LCD-show || exit 1
 cd /root/rd1-boot/LCD-show/ && ./LCD35-show || exit 1
 
-#reboot
-#
+reboot
