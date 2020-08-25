@@ -26,9 +26,9 @@ docker pull eu.gcr.io/rd1-build/rd1-dashboard:arm || exit 1  &
 # pull rd1-owserver
 docker pull eu.gcr.io/rd1-build/rd1-owserver:arm || exit 1 &
 # pull mqtt
-docker pull eclipse-mosquitto:latest || exit 1 &
+docker pull eu.gcr.io/rd1-build/eclipse-mosquitto:latest || exit 1 &
 # pull nodered
-docker pull nodered/node-red:latest || exit 1 &
+docker pull eu.gcr.io/rd1-build/node-red:latest || exit 1 &
 wait
 
 echo -e "\e[42m\n\n\n ---- Install HASSIO ---- \n\e[0m"
