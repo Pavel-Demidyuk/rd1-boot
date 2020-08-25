@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-ls /srv/homeassistant/ && exit 0
+ls /srv/homeassistant/ && echo "Homeassistant already installed" && exit 0
 sudo apt-get -y install python3 python3-dev python3-venv python3-pip libffi-dev libssl-dev autoconf build-essential
 sudo useradd -rm homeassistant -G dialout,gpio,i2c
 cd /srv
