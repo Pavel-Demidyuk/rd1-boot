@@ -12,7 +12,7 @@ source bin/activate
 python3 -m pip install wheel
 pip3 install homeassistant
 EOF
-sudo su
+sudo pi
 cd /home/pi/rd1-boot
 #enable hassio service
 cp /home/pi/rd1-boot/services/home-assistant@homeassistant.service /etc/systemd/system/
