@@ -4,8 +4,8 @@
 
 #TODO enable i2c
 
-echo -e "\e[42m\n\n\n ---- Update RPI ---- \n\e[39m"
-echo "ok"
+echo -e "\e[42m\n\n\n ---- Update RPI ---- "
+echo "\n\e[39m"
 sudo apt-get update --yes && sudo apt-get upgrade  --yes || exit 1
 
 echo -e "\e[42m\n\n\n ---- Install DOCKER ---- \n\e[39m"
