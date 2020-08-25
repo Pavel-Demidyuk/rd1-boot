@@ -18,6 +18,10 @@ echo -e "\e[42m\n\n\n ---- Install FBI ---- \n\e[0m"
 #install fbi
 fbi --version || sudo apt-get install -y fbi
 
+echo -e "\e[42m\n\n\n ---- Install Unclutter ---- \n\e[0m"
+#install fbi
+unclutter --version || sudo apt-get install -y unclutter
+
 echo -e "\e[42m\n\n\n ---- Pull DOCKER ---- \n\e[0m"
 # pull rd1-app
 docker pull eu.gcr.io/rd1-build/rd1-app:arm || exit 1  &
