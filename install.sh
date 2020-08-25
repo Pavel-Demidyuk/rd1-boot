@@ -4,21 +4,21 @@
 
 #TODO enable i2c
 
-echo "\n\n\n ---- Update RPI ---- \n"
+printf "\n\n\n ---- Update RPI ---- \n"
 sudo apt-get update --yes && sudo apt-get upgrade  --yes || exit 1
 
-echo "\n\n\n ---- Install DOCKER ---- \n"
+printf "\n\n\n ---- Install DOCKER ---- \n"
 docker -v || curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
 
-echo "\n\n\n ---- Install Chromium ---- \n"
+printf "\n\n\n ---- Install Chromium ---- \n"
 # install chromium
 chromium-browser --version || sudo apt-get install chromium-browser --yes
 
-echo "\n\n\n ---- Install FBI ---- \n"
+printf "\n\n\n ---- Install FBI ---- \n"
 #install fbi
 fbi --version || sudo apt-get install -y fbi
 
-echo "\n\n\n ---- Pull DOCKER ---- \n"
+printf "\n\n\n ---- Pull DOCKER ---- \n"
 # pull rd1-app
 docker pull eu.gcr.io/rd1-build/rd1-app:arm || exit 1  &
 # pull rd1-dashboard
@@ -31,21 +31,21 @@ docker pull eclipse-mosquitto:latest || exit 1 &
 docker pull nodered/node-red:latest || exit 1 &
 wait
 
-echo "\n\n\n ---- Install HASSIO ---- \n"
+printf "\n\n\n ---- Install HASSIO ---- \n"
 ##setup hassio
 bash install_hassio.sh || exit 1
 
-echo "\n\n\n ---- Register rd1 service ---- \n"
+printf "\n\n\n ---- Register rd1 service ---- \n"
 # register rd1 service
 cp /home/pi/rd1-boot/services/rd1.service /etc/systemd/system/
 sudo systemctl --system daemon-reload
 sudo systemctl enable rd1
 
-echo "\n\n\n ---- Install Display Drivers ---- \n"
+printf "\n\n\n ---- Install Display Drivers ---- \n"
 # install display driver
 chmod -R 755 /home/pi/rd1-boot/Lroot/rd1-bootCD-show || exit 1
 cd /home/pi/rd1-boot/LCD-show/ && ./LCD35-show || exit 1
 
-echo "\n\n\n ---- REBOOT!! ---- \n"
+printf "\n\n\n ---- REBOOT!! ---- \n"
 sleep 3
 reboot
