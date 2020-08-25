@@ -8,7 +8,7 @@ printf "\n\n\n ---- Update RPI ---- \n"
 sudo apt-get update --yes && sudo apt-get upgrade  --yes || exit 1
 
 printf "\n\n\n ---- Install DOCKER ---- \n"
-docker -v || curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
+docker -v || (curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh)
 
 printf "\n\n\n ---- Install Chromium ---- \n"
 # install chromium
