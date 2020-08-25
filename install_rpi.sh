@@ -5,11 +5,10 @@
 #TODO enable i2c
 
 sudo apt-get update --yes && sudo apt-get upgrade  --yes || exit 1
-curl -fsSL https://get.docker.com -o get-docker.sh || exit 1
-sudo sh get-docker.sh || exit 1
+docker -v || curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
 
 # install chromium
-sudo apt-get install chromium-browser --yes
+chromium-browser --version || sudo apt-get install chromium-browser --yes
 
 #install fbi
 sudo apt-get install -y fbi
