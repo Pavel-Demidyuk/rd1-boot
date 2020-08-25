@@ -1,32 +1,32 @@
 #!/usr/bin/env bash
 
-echo "starting custom rd1 scripts from /root/rd1-boot/custom.sh"
-echo "Starting to load RD1 CUSTOM.SH"
-fbi -a --noverbose -T 1 /root/rd1-boot/loading_images/loading1.png
-#bash /root/rd1-boot/bash/resize.sh ; sleep 1
+echo -e "\e[42m\n\n\n ---- starting custom rd1 scripts from /home/pi/rd1-boot/custom.sh  ---- \n\e[0m"
+echo -e "\e[42m\n\n\n Starting to load RD1 CUSTOM.SH ---- \n\e[0m"
+fbi -a --noverbose -T 1 /home/pi/rd1-boot/loading_images/loading1.png
+#bash /home/pi/rd1-boot/bash/resize.sh ; sleep 1
 
 #dashboard
-fbi -a --noverbose -T 1 /root/rd1-boot/loading_images/loading2.png
-bash /root/rd1-boot/bash/services/rd1-dashboard.sh
+fbi -a --noverbose -T 1 /home/pi/rd1-boot/loading_images/loading2.png
+bash /home/pi/rd1-boot/bash/services/rd1-dashboard.sh
 
 #owserver
-fbi -a --noverbose -T 1 /root/rd1-boot/loading_images/loading3.png
-bash /root/rd1-boot/bash/services/rd1-owserver.sh
+fbi -a --noverbose -T 1 /home/pi/rd1-boot/loading_images/loading3.png
+bash /home/pi/rd1-boot/bash/services/rd1-owserver.sh
 
 #mqtt
-fbi -a --noverbose -T 1 /root/rd1-boot/loading_images/loading4.png
-bash /root/rd1-boot/bash/services/mqtt.sh
+fbi -a --noverbose -T 1 /home/pi/rd1-boot/loading_images/loading4.png
+bash /home/pi/rd1-boot/bash/services/mqtt.sh
 
 #nodered
-fbi -a --noverbose -T 1 /root/rd1-boot/loading_images/loading5.png
-bash /root/rd1-boot/bash/services/nodered.sh
+fbi -a --noverbose -T 1 /home/pi/rd1-boot/loading_images/loading5.png
+bash /home/pi/rd1-boot/bash/services/nodered.sh
 
 #rd1-app
-fbi -a --noverbose -T 1 /root/rd1-boot/loading_images/loading6.png
-bash /root/rd1-boot/bash/upgrade.sh; bash /root/rd1-boot/bash/services/rd1-app.sh
+fbi -a --noverbose -T 1 /home/pi/rd1-boot/loading_images/loading6.png
+bash /home/pi/rd1-boot/bash/upgrade.sh; bash /home/pi/rd1-boot/bash/services/rd1-app.sh
 
 # chromium
-fbi -a --noverbose -T 1 /root/rd1-boot/loading_images/loading7.png
-bash /root/rd1-boot/bash/chromium.sh | tee /tmp/rd1-chromium-preboot.log
+fbi -a --noverbose -T 1 /home/pi/rd1-boot/loading_images/loading7.png
+bash /home/pi/rd1-boot/bash/chromium.sh | tee /tmp/rd1-chromium-preboot.log
 wait
-echo "Finished custom rd1 scripts"
+echo -e "\e[42m\n\n\n Finished custom rd1 scripts"

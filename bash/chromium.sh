@@ -8,19 +8,19 @@
 # --pull-to-refresh=1
 # --ash-host-window-bounds="400,300"
 
-sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' /root/.config/chromium/Default/Preferences
-sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /root/.config/chromium/Default/Preferences
+#sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' /root/.config/chromium/Default/Preferences
+#sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /root/.config/chromium/Default/Preferences
 
 # Resolution to use for kiosk mode, should ideally match current system resolution
-RES_X=$(sed -n '/^[[:blank:]]*SOFTWARE_CHROMIUM_RES_X=/{s/^[^=]*=//p;q}' /boot/dietpi.txt)
-RES_Y=$(sed -n '/^[[:blank:]]*SOFTWARE_CHROMIUM_RES_Y=/{s/^[^=]*=//p;q}' /boot/dietpi.txt)
+RES_X=480
+RES_Y=320
 
 CHROMIUM_OPTS="--kiosk --no-first-run --check-for-update-interval=864000000 --noerrdialogs --disable-infobars --test-type --window-size=$RES_X,$RES_Y --start-fullscreen --start-maximized --window-position=0,0"
 # If you want tablet mode, uncomment the next line.
 #CHROMIUM_OPTS+=' --force-tablet-mode --tablet-ui'
 
 # Add URL for first run:
-URL=$(sed -n '/^[[:blank:]]*SOFTWARE_CHROMIUM_AUTOSTART_URL=/{s/^[^=]*=//p;q}' /boot/dietpi.txt)
+URL="http://localhost:3000"
 CHROMIUM_OPTS+=" --homepage $URL"
 
 # Find absolute filepath location of Chromium binary.
@@ -31,7 +31,7 @@ if [[ ! $FP_CHROMIUM ]]; then
 	FP_CHROMIUM="$(command -v chromium-browser)"
 
 fi
-while ! wget -q --spider http://localhost:3000; do
+while ! wget -q --spider $URL; do
     echo '!!!!  waiting for rd1 dashboard to launch...' && sleep 5;
 done
 killall -9 fbi
