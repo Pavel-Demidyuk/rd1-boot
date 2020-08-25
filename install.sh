@@ -47,7 +47,7 @@ sudo systemctl enable rd1
 
 echo -e "\e[42m\n\n\n ---- Install Display Drivers ---- \n\e[0m"
 # install display driver
-chmod -R 755 /home/pi/rd1-boot/Lroot/rd1-bootCD-show || exit 1
+chmod -R 755 /home/pi/rd1-boot/LCD-show || exit 1
 cd /home/pi/rd1-boot/LCD-show/ && ./LCD35-show || exit 1
 
 echo -e "\e[42m\n\n\n ---- REBOOT!! ---- \n\e[0m"
