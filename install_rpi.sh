@@ -11,7 +11,7 @@ docker -v || curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-d
 chromium-browser --version || sudo apt-get install chromium-browser --yes
 
 #install fbi
-sudo apt-get install -y fbi
+fbi --version || sudo apt-get install -y fbi
 
 # pull rd1-app
 docker pull eu.gcr.io/rd1-build/rd1-app:arm || exit 1  &
@@ -29,12 +29,12 @@ wait
 bash install_hassio.sh || exit 1
 
 # register rd1 service
-cp /root/rd1-boot/services/rd1.service /etc/systemd/system/
+cp /home/pi/rd1-boot/services/rd1.service /etc/systemd/system/
 sudo systemctl --system daemon-reload
 sudo systemctl enable rd1
 
 # install display driver
-chmod -R 755 /root/rd1-boot/LCD-show || exit 1
-cd /root/rd1-boot/LCD-show/ && ./LCD35-show || exit 1
+chmod -R 755 /home/pi/rd1-boot/Lroot/rd1-bootCD-show || exit 1
+cd /home/pi/rd1-boot/LCD-show/ && ./LCD35-show || exit 1
 
 reboot
