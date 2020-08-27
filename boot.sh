@@ -18,4 +18,4 @@ unzip master.zip
 rm -rf master.zip
 mv rd1-boot-master rd1-boot
 chmod -R +x rd1-boot
-cd rd1-boot && install.sh
+cd rd1-boot && ./install.sh
