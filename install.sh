@@ -20,7 +20,9 @@ echo -e "\e[42m\n\n\n ---- Update RPI ---- \e[0m"
 sudo apt-get update --yes && sudo apt-get upgrade  --yes || exit 1
 
 echo -e "\e[42m\n\n\n ---- Install display driver ---- \e[0m"
-./LCD-show/LCD35-show
+cd LCD-SHOW
+./LCD35-show
+cd ..
 
 echo -e "\e[35m\n\n\n ---- Desktop setup ---- \e[0m"
 #sudo apt-get install lightdm || exit 1
