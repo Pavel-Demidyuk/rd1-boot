@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+exit 1
 echo -e "\e[42m\n\n\n ---- starting custom rd1 scripts from /home/pi/rd1-boot/custom.sh  ---- \n\e[0m"
 echo -e "\e[42m\n\n\n Starting to load RD1 CUSTOM.SH ---- \n\e[0m"
 fbi -a --noverbose -T 1 /home/pi/rd1-boot/loading_images/loading1.png
