@@ -58,7 +58,7 @@ bash install_hassio.sh || exit 1
 
 echo -e "\e[42m\n\n\n ---- Register rd1 service ---- \n\e[0m"
 # register rd1 service
-cp /home/pi/rd1-boot/services/rd1.service /etc/systemd/system/
+sudo cp /home/pi/rd1-boot/services/rd1.service /etc/systemd/system/
 sudo systemctl --system daemon-reload
 sudo systemctl enable rd1
 
