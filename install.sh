@@ -25,7 +25,7 @@ cd LCD-show
 cd ..
 
 echo -e "\e[42m\n\n\n ---- Install DOCKER ---- \n\e[0m"
-dpkg -s docker || (curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh)
+docker -v || (curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh)
 
 echo -e "\e[42m\n\n\n ---- Install Chromium ---- \n\e[0m"
 # install chromium
