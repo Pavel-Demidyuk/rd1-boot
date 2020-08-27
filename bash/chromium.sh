@@ -36,7 +36,8 @@ while ! wget -q --spider $URL; do
 done
 killall -9 fbi
 sleep 3
-unclutter -idle 2 -display :0 -noevents -grab &
+#unclutter -idle 2 -display :0 -noevents -grab &
+unclutter -idle 2 -noevents -grab &
 printf "Starting chromium...\n\n\n\n"
 echo $FP_CHROMIUM
 echo $CHROMIUM_OPTS
