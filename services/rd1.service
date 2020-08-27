@@ -8,7 +8,7 @@ After=rd1.service
 Type=idle
 RemainAfterExit=no
 StandardOutput=tty
-ExecStart=/bin/dash -c '/root/rd1-boot/run.sh 2>&1 | tee /tmp/rd1-run.log'
+ExecStart=/bin/dash -c '/home/pi/rd1-boot/run.sh 2>&1 | tee /tmp/rd1-run.log'
 
 [Install]
 WantedBy=multi-user.target
