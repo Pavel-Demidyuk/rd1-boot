@@ -7,5 +7,6 @@ sudo docker run -d \
     --name=$name \
 	--network=host \
 	--restart=always \
+	--privileged=true \
 	-v  /root/rd1/boot/nodered/data:/data \
 	$image && echo $name 'service started'
