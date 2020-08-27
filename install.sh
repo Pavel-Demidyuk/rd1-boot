@@ -20,7 +20,7 @@ echo -e "\e[42m\n\n\n ---- Update RPI ---- \e[0m"
 sudo apt-get update --yes && sudo apt-get upgrade  --yes || exit 1
 
 echo -e "\e[42m\n\n\n ---- Install display driver ---- \e[0m"
-cd LCD-SHOW
+cd LCD-show
 ./LCD35-show
 cd ..
 
