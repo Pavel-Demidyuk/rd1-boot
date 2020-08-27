@@ -40,5 +40,5 @@ unclutter -idle 2 -display :0 -noevents -grab &
 printf "Starting chromium...\n\n\n\n"
 echo $FP_CHROMIUM
 echo $CHROMIUM_OPTS
-xinit $FP_CHROMIUM $CHROMIUM_OPTS
+$FP_CHROMIUM $CHROMIUM_OPTS
 printf "Done loading chromium \n\n\n\n\n"
