@@ -24,25 +24,20 @@ cd LCD-show
 ./LCD35-show
 cd ..
 
-echo -e "\e[35m\n\n\n ---- Desktop setup ---- \e[0m"
-#sudo apt-get install lightdm || exit 1
-#sudo apt-get install --no-install-recommends xserver-xorg x11-xserver-utils xinit openbox
-
-
 echo -e "\e[42m\n\n\n ---- Install DOCKER ---- \n\e[0m"
-docker -v || (curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh)
+dpkg -s docker || (curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh)
 
 echo -e "\e[42m\n\n\n ---- Install Chromium ---- \n\e[0m"
 # install chromium
-chromium-browser --version || sudo apt-get install chromium-browser --yes
+dpkg -s chromium-browser || sudo apt-get install chromium-browser --yes
 
 echo -e "\e[42m\n\n\n ---- Install FBI ---- \n\e[0m"
 #install fbi
-fbi --version || sudo apt-get install -y fbi
+dpkg -s fbi || sudo apt-get install -y fbi
 
 echo -e "\e[42m\n\n\n ---- Install Unclutter ---- \n\e[0m"
-#install fbi
-unclutter --version || sudo apt-get install -y unclutter
+#install unclutter
+dpkg -s unclutter || sudo apt-get install -y unclutter
 
 echo -e "\e[42m\n\n\n ---- Pull DOCKER ---- \n\e[0m"
 # pull rd1-app
