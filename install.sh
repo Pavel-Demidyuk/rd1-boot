@@ -69,4 +69,4 @@ cd /home/pi/rd1-boot/LCD-show/ && ./LCD35-show || exit 1
 
 echo -e "\e[42m\n\n\n ---- REBOOT!! ---- \n\e[0m"
 sleep 3
-reboot
+#reboot
