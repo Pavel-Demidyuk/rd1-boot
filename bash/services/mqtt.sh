@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 name='mqtt'
-docker stop $name && echo $name 'service stopped'
-docker rm $name && echo $name 'service removed'
-docker run -d --name=$name \
+sudo docker stop $name && echo $name 'service stopped'
+sudo docker rm $name && echo $name 'service removed'
+sudo docker run -d --name=$name \
 	--network=host \
 	--restart=always \
 	--health-cmd='exit 0' \
