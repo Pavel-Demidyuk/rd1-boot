@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+exit 0
 echo -e "\e[42m\n\n\n ---- starting custom rd1 scripts from /home/pi/rd1-boot/custom.sh  ---- \n\e[0m"
 echo -e "\e[42m\n\n\n Starting to load RD1 CUSTOM.SH ---- \n\e[0m"
 #params="-a --noverbose -T 1"
