@@ -118,15 +118,18 @@
 <script>
     const URL = "http://localhost:3000"
     let checkOnline = _ => {
+
+        console.log("checking online")
         fetch(URL).then(_ => {
-            console.log('fetched')
+            window.location(URL)
         }).catch(_ => {
-            console.log('err')
+            // shh...
         })
-        setTimeout(1000, checkOnline())
+
+        setTimeout(() => {
+            checkOnline()
+        }, 3000)
     }
-
     checkOnline()
-
 </script>
 </html>
