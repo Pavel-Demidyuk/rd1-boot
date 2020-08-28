@@ -27,8 +27,8 @@ bash /home/pi/rd1-boot/bash/services/nodered.sh
 fbi $params /home/pi/rd1-boot/loading_images/loading6.png
 bash /home/pi/rd1-boot/bash/upgrade.sh; bash /home/pi/rd1-boot/bash/services/rd1-app.sh
 
-# chromium
-fbi $params /home/pi/rd1-boot/loading_images/loading7.png
-bash /home/pi/rd1-boot/bash/chromium.sh | tee /tmp/rd1-chromium-preboot.log
-wait
-echo -e "\e[42m\n\n\n Finished custom rd1 scripts"
+## chromium
+#fbi $params /home/pi/rd1-boot/loading_images/loading7.png
+#bash /home/pi/rd1-boot/bash/chromium.sh | tee /tmp/rd1-chromium-preboot.log
+#wait
+#echo -e "\e[42m\n\n\n Finished custom rd1 scripts"
