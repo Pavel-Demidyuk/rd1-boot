@@ -121,7 +121,7 @@
 
         console.log("checking online")
         fetch(URL).then(_ => {
-            window.location(URL)
+            window.location.href = URL
         }).catch(_ => {
             // shh...
         })
