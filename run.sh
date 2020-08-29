@@ -11,4 +11,4 @@ bash /home/pi/rd1-boot/bash/services/mqtt.sh
 #nodered
 bash /home/pi/rd1-boot/bash/services/nodered.sh
 #rd1-app
-bash /home/pi/rd1-boot/bash/upgrade.sh; bash /home/pi/rd1-boot/bash/services/rd1-app.sh
+bash /home/pi/rd1-boot/bash/services/rd1-app.sh
