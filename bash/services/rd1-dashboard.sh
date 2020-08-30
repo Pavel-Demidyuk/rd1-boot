@@ -6,7 +6,8 @@ sudo docker kill $name && echo $name 'service killed'
 sudo docker rm $name && echo $name 'service removed'
 sudo docker run -d --name=$name \
 	--restart=on-failure \
-	--priveleged
+	--priveleged \
+	-v /proc/sysrq-trigger:/sysrq \
     --health-cmd='rm -rf index.html && wget --spider -q http://localhost:3000 && exit 0 || exit 1' \
 	--health-timeout=10s \
 	--health-retries=3 \
