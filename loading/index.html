@@ -120,8 +120,7 @@
     let checkOnline = _ => {
 
         console.log("checking online")
-        fetch(URL).then(_ => {
-            alert('ok')
+        fetch(URL, {mode: 'no-cors'}).then(_ => {
             window.location.href = URL
         }).catch(_ => {
             // shh...
