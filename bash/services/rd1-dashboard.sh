@@ -8,6 +8,7 @@ sudo docker run -d --name=$name \
 	-p 3000:3000 \
 	--restart=on-failure \
 	-v /proc/sysrq-trigger:/sysrq \
+	-v /etc/wpa_supplicant/wpa_supplicant.conf:/wpa_supplicant.conf
     --health-cmd='rm -rf index.html && wget --spider -q http://localhost:3000 && exit 0 || exit 1' \
 	--health-timeout=10s \
 	--health-retries=3 \
