@@ -7,6 +7,7 @@ sudo docker rm $name && echo $name 'service removed'
 sudo docker run -d --name=$name \
 	-p 3000:3000 \
 	--restart=on-failure \
+	--priveleged
     --health-cmd='rm -rf index.html && wget --spider -q http://localhost:3000 && exit 0 || exit 1' \
 	--health-timeout=10s \
 	--health-retries=3 \
