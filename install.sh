@@ -26,6 +26,10 @@ cd LCD-show
 ./LCD35-show
 cd ..
 
+echo -e "\e[42m\n\n\n ---- Autostart setup ---- \e[0m"
+# this will start static index.html page on pre boot
+cp services/autostart /home/pi/.config/lxsession/LXDE-pi/
+
 echo -e "\e[42m\n\n\n ---- Install DOCKER ---- \n\e[0m"
 docker -v || (curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh)
 
@@ -36,6 +40,10 @@ dpkg -s chromium-browser || sudo apt-get install chromium-browser --yes
 echo -e "\e[42m\n\n\n ---- Install NPM ---- \n\e[0m"
 # install npm
 npm -v || (sudo apt-get install npm --yes && sudo npm i npm@latest -g)
+
+echo -e "\e[42m\n\n\n ---- Install RD1-DASHBOARD ---- \n\e[0m"
+# install npm
+cd rd1-dashboard && npm install
 
 echo -e "\e[42m\n\n\n ---- Install FBI ---- \n\e[0m"
 #install fbi

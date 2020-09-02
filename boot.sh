@@ -13,9 +13,13 @@
 # 3. [ INFO ] DietPi has detected an increased GPU memory is required for your installed software:
 
 rm -rf master* rd1*
-wget --no-check-certificate https://github.com/Pavel-Demidyuk/rd1-boot/archive/master.zip
-unzip master.zip
-rm -rf master.zip
+wget --no-check-certificate https://github.com/Pavel-Demidyuk/rd1-boot/archive/master.zip && mv master.zip boot.zip
+wget --no-check-certificate https://github.com/Pavel-Demidyuk/rd1-dashboard/archive/master.zip  && mv master.zip dashboard.zip
+
+unzip boot.zip
+unzip dashboard.zip
+rm -rf boot.zip dashboard.zip
 mv rd1-boot-master rd1-boot
+mv rd1-dashboard-master rd1-dashboard
 chmod -R +x rd1-boot
 cd rd1-boot && ./install.sh

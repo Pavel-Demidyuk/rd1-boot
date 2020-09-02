@@ -8,8 +8,8 @@
 # --pull-to-refresh=1
 # --ash-host-window-bounds="400,300"
 
-#sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' /root/.config/chromium/Default/Preferences
-#sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /root/.config/chromium/Default/Preferences
+sudo sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' /home/pi/.config/chromium/Default/Preferences
+sudo sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /home/pi/.config/chromium/Default/Preferences
 
 # Resolution to use for kiosk mode, should ideally match current system resolution
 RES_X=480
