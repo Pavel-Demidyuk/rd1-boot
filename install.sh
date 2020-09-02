@@ -15,6 +15,8 @@
 #su pi
 
 
+# TODO install rd1-dashboard
+
 
 echo -e "\e[42m\n\n\n ---- Update RPI ---- \e[0m"
 sudo apt-get update --yes && sudo apt-get upgrade  --yes || exit 1
@@ -30,6 +32,10 @@ docker -v || (curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-
 echo -e "\e[42m\n\n\n ---- Install Chromium ---- \n\e[0m"
 # install chromium
 dpkg -s chromium-browser || sudo apt-get install chromium-browser --yes
+
+echo -e "\e[42m\n\n\n ---- Install NPM ---- \n\e[0m"
+# install npm
+npm -v || (sudo apt-get install npm --yes && sudo npm i npm@latest -g)
 
 echo -e "\e[42m\n\n\n ---- Install FBI ---- \n\e[0m"
 #install fbi
