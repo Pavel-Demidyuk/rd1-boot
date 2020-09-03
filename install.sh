@@ -32,7 +32,7 @@ cd ..
 echo -e "\e[42m\n\n\n ---- Autostart setup ---- \e[0m"
 # this will start static index.html page on pre boot
 mkdir -p /home/pi/.config/lxsession/LXDE-pi/
-cp services/autostart /home/pi/.config/lxsession/LXDE-pi/
+cp /home/pi/rd1-boot/services/autostart /home/pi/.config/lxsession/LXDE-pi/
 
 echo -e "\e[42m\n\n\n ---- Install DOCKER ---- \n\e[0m"
 docker -v || (curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh)
