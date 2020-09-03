@@ -15,7 +15,7 @@ sudo sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /home/pi/.config/chr
 RES_X=480
 RES_Y=320
 
-CHROMIUM_OPTS="--kiosk --no-first-run --check-for-update-interval=864000000 --noerrdialogs --disable-infobars --test-type --window-size=$RES_X,$RES_Y --start-fullscreen --start-maximized --window-position=0,0"
+CHROMIUM_OPTS="--kiosk --incognito --no-first-run --check-for-update-interval=864000000 --noerrdialogs --disable-infobars --test-type --window-size=$RES_X,$RES_Y --start-fullscreen --start-maximized --window-position=0,0"
 # If you want tablet mode, uncomment the next line.
 #CHROMIUM_OPTS+=' --force-tablet-mode --tablet-ui'
 
