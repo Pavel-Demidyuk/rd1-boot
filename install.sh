@@ -53,15 +53,15 @@ dpkg -s unclutter || sudo apt-get install -y unclutter
 
 echo -e "\e[42m\n\n\n ---- Pull DOCKER ---- \n\e[0m"
 # pull rd1-app
-sudo docker pull eu.gcr.io/rd1-build/rd1-app:arm || exit 1
+sudo docker pull eu.gcr.io/rd1-build/rd1-app:arm || exit 1 &
 # pull rd1-dashboard
 #sudo docker pull eu.gcr.io/rd1-build/rd1-dashboard:arm || exit 1  &
 # pull rd1-owserver
-sudo docker pull eu.gcr.io/rd1-build/rd1-owserver:arm || exit 1
+sudo docker pull eu.gcr.io/rd1-build/rd1-owserver:arm || exit 1 &
 # pull mqtt
-sudo docker pull eu.gcr.io/rd1-build/eclipse-mosquitto:latest || exit 1
+sudo docker pull eu.gcr.io/rd1-build/eclipse-mosquitto:latest || exit 1 &
 # pull nodered
-sudo docker pull eu.gcr.io/rd1-build/node-red:latest || exit 1
+sudo docker pull eu.gcr.io/rd1-build/node-red:latest || exit 1 &
 wait
 
 echo -e "\e[42m\n\n\n ---- Install HASSIO ---- \n\e[0m"
