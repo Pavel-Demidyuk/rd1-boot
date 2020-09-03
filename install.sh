@@ -14,13 +14,6 @@
 #echo "dtparam=i2c_arm=on" >> /boot/config.txt)
 #su pi
 
-
-# DONE: TODO install rd1-dashboard
-# CHECK TODO enable i2c - CHECK maybe enabled by default
-# NO NEED TODO change ssh password
-# CHECK on new install TODO chromium start page fix
-
-
 echo -e "\e[42m\n\n\n ---- Update RPI ---- \e[0m"
 sudo apt-get update --yes && sudo apt-get upgrade  --yes || exit 1
 
@@ -43,7 +36,7 @@ dpkg -s chromium-browser || sudo apt-get install chromium-browser --yes
 
 echo -e "\e[42m\n\n\n ---- Install NPM ---- \n\e[0m"
 # install npm
-npm -v || (sudo apt-get install npm --yes && sudo npm i npm@latest -g)
+npm -v || (sudo apt-get install npm --yes)
 
 echo -e "\e[42m\n\n\n ---- Install RD1-DASHBOARD ---- \n\e[0m"
 # install npm
