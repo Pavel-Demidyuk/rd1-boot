@@ -47,7 +47,8 @@ npm -v || (sudo apt-get install npm --yes && sudo npm i npm@latest -g)
 
 echo -e "\e[42m\n\n\n ---- Install RD1-DASHBOARD ---- \n\e[0m"
 # install npm
-cd rd1-dashboard && npm install
+cd /home/pi/rd1-dashboard && npm install -g npm@latest && npm install
+cd /home/pi/rd1-boot
 
 echo -e "\e[42m\n\n\n ---- Install FBI ---- \n\e[0m"
 #install fbi
@@ -59,15 +60,15 @@ dpkg -s unclutter || sudo apt-get install -y unclutter
 
 echo -e "\e[42m\n\n\n ---- Pull DOCKER ---- \n\e[0m"
 # pull rd1-app
-sudo docker pull eu.gcr.io/rd1-build/rd1-app:arm || exit 1  &
+sudo docker pull eu.gcr.io/rd1-build/rd1-app:arm || exit 1
 # pull rd1-dashboard
 #sudo docker pull eu.gcr.io/rd1-build/rd1-dashboard:arm || exit 1  &
 # pull rd1-owserver
-sudo docker pull eu.gcr.io/rd1-build/rd1-owserver:arm || exit 1 &
+sudo docker pull eu.gcr.io/rd1-build/rd1-owserver:arm || exit 1
 # pull mqtt
-sudo docker pull eu.gcr.io/rd1-build/eclipse-mosquitto:latest || exit 1 &
+sudo docker pull eu.gcr.io/rd1-build/eclipse-mosquitto:latest || exit 1
 # pull nodered
-sudo docker pull eu.gcr.io/rd1-build/node-red:latest || exit 1 &
+sudo docker pull eu.gcr.io/rd1-build/node-red:latest || exit 1
 wait
 
 echo -e "\e[42m\n\n\n ---- Install HASSIO ---- \n\e[0m"
@@ -79,11 +80,6 @@ echo -e "\e[42m\n\n\n ---- Register rd1 service ---- \n\e[0m"
 sudo cp /home/pi/rd1-boot/services/rd1.service /etc/systemd/system/
 sudo systemctl --system daemon-reload
 sudo systemctl enable rd1
-
-echo -e "\e[42m\n\n\n ---- Install Display Drivers ---- \n\e[0m"
-# install display driver
-chmod -R 755 /home/pi/rd1-boot/LCD-show || exit 1
-cd /home/pi/rd1-boot/LCD-show/ && ./LCD35-show || exit 1
 
 echo -e "\e[42m\n\n\n ---- REBOOT!! ---- \n\e[0m"
 sleep 3
