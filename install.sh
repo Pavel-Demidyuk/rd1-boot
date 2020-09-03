@@ -15,7 +15,10 @@
 #su pi
 
 
-# TODO install rd1-dashboard
+# DONE: TODO install rd1-dashboard
+# CHECK TODO enable i2c - CHECK maybe enabled by default
+# NO NEED TODO change ssh password
+# CHECK on new install TODO chromium start page fix
 
 
 echo -e "\e[42m\n\n\n ---- Update RPI ---- \e[0m"
@@ -28,6 +31,7 @@ cd ..
 
 echo -e "\e[42m\n\n\n ---- Autostart setup ---- \e[0m"
 # this will start static index.html page on pre boot
+mkdir -p /home/pi/.config/lxsession/LXDE-pi/
 cp services/autostart /home/pi/.config/lxsession/LXDE-pi/
 
 echo -e "\e[42m\n\n\n ---- Install DOCKER ---- \n\e[0m"
@@ -57,7 +61,7 @@ echo -e "\e[42m\n\n\n ---- Pull DOCKER ---- \n\e[0m"
 # pull rd1-app
 sudo docker pull eu.gcr.io/rd1-build/rd1-app:arm || exit 1  &
 # pull rd1-dashboard
-sudo docker pull eu.gcr.io/rd1-build/rd1-dashboard:arm || exit 1  &
+#sudo docker pull eu.gcr.io/rd1-build/rd1-dashboard:arm || exit 1  &
 # pull rd1-owserver
 sudo docker pull eu.gcr.io/rd1-build/rd1-owserver:arm || exit 1 &
 # pull mqtt
