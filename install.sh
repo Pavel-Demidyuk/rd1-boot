@@ -40,7 +40,7 @@ npm -v || (sudo apt-get install npm --yes)
 
 echo -e "\e[42m\n\n\n ---- Install RD1-DASHBOARD ---- \n\e[0m"
 # install npm
-cd /home/pi/rd1-dashboard && sudo npm install -g npm@latest && npm instal
+cd /home/pi/rd1-dashboard && sudo npm install -g npm@latest && npm install
 cd /home/pi/rd1-boot
 
 echo -e "\e[42m\n\n\n ---- Install FBI ---- \n\e[0m"
