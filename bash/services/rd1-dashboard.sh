@@ -16,4 +16,4 @@
 #	$image && echo $name 'service started'
 
 
-cd /home/pi/rd1-dashboard && npm restart
+cd /home/pi/rd1-dashboard && npm -s restart
