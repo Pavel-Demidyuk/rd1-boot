@@ -1,0 +1,18 @@
+2020-03-26 09:06:19 WARNING (Recorder) [homeassistant.components.recorder] Ended unfinished session (id=8 from 2020-03-26 09:03:52.679786)
+2020-03-26 09:06:36 ERROR (MainThread) [homeassistant.setup] Error during setup of component zeroconf
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/setup.py", line 174, in _async_setup_component
+    component.setup, hass, processed_config  # type: ignore
+  File "/usr/local/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/zeroconf/__init__.py", line 42, in setup
+    zeroconf = Zeroconf()
+  File "/usr/local/lib/python3.7/site-packages/zeroconf/__init__.py", line 2147, in __init__
+    interfaces, unicast, ip_version, apple_p2p=apple_p2p
+  File "/usr/local/lib/python3.7/site-packages/zeroconf/__init__.py", line 2075, in create_sockets
+    respond_socket = add_multicast_member(cast(socket.socket, listen_socket), i, apple_p2p=apple_p2p)
+  File "/usr/local/lib/python3.7/site-packages/zeroconf/__init__.py", line 2053, in add_multicast_member
+    socket.IPPROTO_IP, socket.IP_MULTICAST_IF, socket.inet_aton(cast(str, interface))
+OSError: [Errno 92] Protocol not available
+2020-03-26 09:06:42 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of default_config. Setup failed for dependencies: zeroconf
+2020-03-26 09:06:42 ERROR (MainThread) [homeassistant.setup] Setup failed for default_config: Could not set up all dependencies.

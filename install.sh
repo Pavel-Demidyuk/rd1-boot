@@ -22,11 +22,6 @@ cd LCD-show
 ./LCD35-show
 cd ..
 
-echo -e "\e[42m\n\n\n ---- Creating user data  ---- \e[0m"
-mkdir -p /home/pi/rd1-data/nodered/
-cp -r /home/pi/rd1-boot/install-data/nodered/data /home/pi/rd1-data/nodered/
-cp -r /home/pi/rd1-boot/install-data/homebridge /home/pi/rd1-data/homebridge
-
 echo -e "\e[42m\n\n\n ---- Autostart setup ---- \e[0m"
 # this will start static index.html page on pre boot
 mkdir -p /home/pi/.config/lxsession/LXDE-pi/
@@ -73,6 +68,13 @@ wait
 echo -e "\e[42m\n\n\n ---- Install HASSIO ---- \n\e[0m"
 ##setup hassio
 bash install_hassio.sh || exit 1
+
+echo -e "\e[42m\n\n\n ---- Creating user data  ---- \e[0m"
+mkdir -p /home/pi/rd1-data/nodered/
+cp -r /home/pi/rd1-boot/install-data/nodered/data /home/pi/rd1-data/nodered/
+cp -r /home/pi/rd1-boot/install-data/homebridge /home/pi/rd1-data/homebridge
+sudo -u homeassistant mkdir -p /home/homeassistant/.homeassistant
+sudo -u homeassistant cp -r /home/pi/rd1-boot/hassio/* /home/homeassistant/.homeassistant
 
 echo -e "\e[42m\n\n\n ---- Register rd1 service ---- \n\e[0m"
 # register rd1 service
