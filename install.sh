@@ -22,6 +22,9 @@ cd LCD-show
 ./LCD35-show
 cd ..
 
+echo -e "\e[42m\n\n\n ---- Creating user data folders ---- \e[0m"
+mkdir -p /home/pi/rd1-data/nodered/data
+
 echo -e "\e[42m\n\n\n ---- Autostart setup ---- \e[0m"
 # this will start static index.html page on pre boot
 mkdir -p /home/pi/.config/lxsession/LXDE-pi/

@@ -8,5 +8,5 @@ sudo docker run -d \
 	--network=host \
 	--restart=always \
 	--privileged=true \
-	-v  /root/rd1/boot/nodered/data:/data \
+	-v  /home/pi/rd1-data/nodered/data:/data \
 	$image && echo $name 'service started'
