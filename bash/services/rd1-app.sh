@@ -7,7 +7,7 @@ sudo docker rm $name && echo $name 'service removed'
 sudo docker run -d --name=$name \
 	--network=host \
 	--restart=on-failure \
-	-v /root/rd1/configs/homebridge/:/usr/src/app/configs/homebridge \
+	-v /home/pi/rd1-data/homebridge/:/usr/src/app/configs/homebridge \
 	-e "NODE_ENV=prod" \
     -e "APP_PORT=5051" \
     -e "DEBUG=boot,debug,app,db,warning,info,esp,homebridge,matcher" \

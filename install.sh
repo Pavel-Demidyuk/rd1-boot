@@ -24,7 +24,8 @@ cd ..
 
 echo -e "\e[42m\n\n\n ---- Creating user data  ---- \e[0m"
 mkdir -p /home/pi/rd1-data/nodered/
-cp /home/pi/rd1-boot/install-data/nodered/ /home/pi/rd1-data/nodered/
+cp -r /home/pi/rd1-boot/install-data/nodered/data /home/pi/rd1-data/nodered/
+cp -r /home/pi/rd1-boot/install-data/homebridge /home/pi/rd1-data/homebridge
 
 echo -e "\e[42m\n\n\n ---- Autostart setup ---- \e[0m"
 # this will start static index.html page on pre boot

@@ -1,0 +1,13 @@
+{
+  "bridge": {
+    "name": "rd1",
+    "username": "CF:11:11:22:33:05",
+    "port": 51826,
+    "pin": "312-89-140"
+  },
+  "platforms": [
+    {
+      "platform": "rd1"
+    }
+  ]
+}
