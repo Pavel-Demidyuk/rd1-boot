@@ -62,7 +62,7 @@ sudo docker pull eu.gcr.io/rd1-build/rd1-owserver:arm || exit 1 &
 #sudo docker pull eu.gcr.io/rd1-build/eclipse-mosquitto:arm || exit 1 &
 sudo docker pull eclipse-mosquitto:latest || exit 1 &
 # pull nodered
-sudo docker pull eu.gcr.io/rd1-build/node-red:latest || exit 1 &
+sudo docker pull nodered/node-red:latest || exit 1 &
 wait
 
 echo -e "\e[42m\n\n\n ---- Install HASSIO ---- \n\e[0m"
