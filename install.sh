@@ -22,13 +22,14 @@ cd LCD-show
 ./LCD35-show
 cd ..
 
-echo -e "\e[42m\n\n\n ---- Creating user data folders ---- \e[0m"
-mkdir -p /home/pi/rd1-data/nodered/data
+echo -e "\e[42m\n\n\n ---- Creating user data  ---- \e[0m"
+mkdir -p /home/pi/rd1-data/nodered/
+cp /home/pi/rd1-boot/install-data/nodered/ /home/pi/rd1-data/nodered/
 
 echo -e "\e[42m\n\n\n ---- Autostart setup ---- \e[0m"
 # this will start static index.html page on pre boot
 mkdir -p /home/pi/.config/lxsession/LXDE-pi/
-cp /home/pi/rd1-boot/services/autostart /home/pi/.config/lxsession/LXDE-pi/
+cp /home/pi/rd1-boot/install-data/autostart /home/pi/.config/lxsession/LXDE-pi/
 
 echo -e "\e[42m\n\n\n ---- Install DOCKER ---- \n\e[0m"
 docker -v || (curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh)
@@ -74,7 +75,7 @@ bash install_hassio.sh || exit 1
 
 echo -e "\e[42m\n\n\n ---- Register rd1 service ---- \n\e[0m"
 # register rd1 service
-sudo cp /home/pi/rd1-boot/services/rd1.service /etc/systemd/system/
+sudo cp /home/pi/rd1-boot/install-data/rd1.service /etc/systemd/system/
 sudo systemctl --system daemon-reload
 sudo systemctl enable rd1
 
