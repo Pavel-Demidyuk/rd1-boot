@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 name='mqtt'
-image='eu.gcr.io/rd1-build/eclipse-mosquitto:arm'
+image='eclipse-mosquitto:latest'
 sudo docker stop $name && echo $name 'service stopped'
 sudo docker rm $name && echo $name 'service removed'
 sudo docker run -d --name=$name \
