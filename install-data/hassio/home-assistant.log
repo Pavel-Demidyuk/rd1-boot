@@ -1,18 +1,162 @@
-2020-03-26 09:06:19 WARNING (Recorder) [homeassistant.components.recorder] Ended unfinished session (id=8 from 2020-03-26 09:03:52.679786)
-2020-03-26 09:06:36 ERROR (MainThread) [homeassistant.setup] Error during setup of component zeroconf
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/setup.py", line 174, in _async_setup_component
-    component.setup, hass, processed_config  # type: ignore
-  File "/usr/local/lib/python3.7/concurrent/futures/thread.py", line 57, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/usr/src/homeassistant/homeassistant/components/zeroconf/__init__.py", line 42, in setup
-    zeroconf = Zeroconf()
-  File "/usr/local/lib/python3.7/site-packages/zeroconf/__init__.py", line 2147, in __init__
-    interfaces, unicast, ip_version, apple_p2p=apple_p2p
-  File "/usr/local/lib/python3.7/site-packages/zeroconf/__init__.py", line 2075, in create_sockets
-    respond_socket = add_multicast_member(cast(socket.socket, listen_socket), i, apple_p2p=apple_p2p)
-  File "/usr/local/lib/python3.7/site-packages/zeroconf/__init__.py", line 2053, in add_multicast_member
-    socket.IPPROTO_IP, socket.IP_MULTICAST_IF, socket.inet_aton(cast(str, interface))
-OSError: [Errno 92] Protocol not available
-2020-03-26 09:06:42 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of default_config. Setup failed for dependencies: zeroconf
-2020-03-26 09:06:42 ERROR (MainThread) [homeassistant.setup] Setup failed for default_config: Could not set up all dependencies.
+2020-09-08 18:28:58 WARNING (Recorder) [homeassistant.components.recorder.migration] Database is about to upgrade. Schema version: 7
+2020-09-08 18:28:58 WARNING (Recorder) [homeassistant.components.recorder.migration] Adding columns context_parent_id to table events. Note: this can take several minutes on large databases and slow computers. Please be patient!
+2020-09-08 18:28:59 WARNING (Recorder) [homeassistant.components.recorder.migration] Adding columns old_state_id to table states. Note: this can take several minutes on large databases and slow computers. Please be patient!
+2020-09-08 18:28:59 WARNING (Recorder) [homeassistant.components.recorder.migration] Adding index `ix_events_context_parent_id` to database. Note: this can take several minutes on large databases and slow computers. Please be patient!
+2020-09-08 18:29:02 WARNING (Recorder) [homeassistant.components.recorder.migration] Adding index `ix_events_event_type_time_fired` to database. Note: this can take several minutes on large databases and slow computers. Please be patient!
+2020-09-08 18:29:03 WARNING (Recorder) [homeassistant.components.recorder] Ended unfinished session (id=9 from 2020-03-26 09:06:18.795479)
+2020-09-08 18:30:16 WARNING (MainThread) [homeassistant.bootstrap] Waiting on integrations to complete setup: cloud
+2020-09-08 18:31:48 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:31:49 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.6
+2020-09-08 18:31:53 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:31:53 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.6
+2020-09-08 18:31:58 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:32:03 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:32:08 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:32:13 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:32:18 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:32:23 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:32:28 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:32:33 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:32:38 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:32:43 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:32:48 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:32:53 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:32:58 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:33:03 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:33:08 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:33:13 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:33:18 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:33:23 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:33:28 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:33:33 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:33:38 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:33:43 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:33:48 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:33:53 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:33:58 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:34:03 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:34:08 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:34:13 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:34:18 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:34:23 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:34:28 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:34:33 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:34:38 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:34:43 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:34:48 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:34:53 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:34:58 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:35:03 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:35:08 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:35:13 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:35:18 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:35:23 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:35:28 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:35:33 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:35:38 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:35:43 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:35:48 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:35:53 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:35:58 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:36:03 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:36:09 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:36:14 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:36:19 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:36:24 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:36:29 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:36:34 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:36:39 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:36:44 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:36:49 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:36:54 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:36:59 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:37:04 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:37:09 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:37:14 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:37:19 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:37:24 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:37:29 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:37:34 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:37:39 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:37:44 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:37:49 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:37:54 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:37:59 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:38:04 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:38:09 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:38:14 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:38:19 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:38:24 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:38:29 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:38:34 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:38:39 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:38:44 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:38:49 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:38:54 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:38:59 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:39:04 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:39:09 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:39:14 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:39:19 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:39:24 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:39:29 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:39:34 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:39:39 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:39:44 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:39:49 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:39:54 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:39:59 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:40:04 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:40:10 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:40:15 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:40:20 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:40:25 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:40:30 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:40:35 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:40:40 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:40:45 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:40:50 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:40:55 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:41:00 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:41:05 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:41:10 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:41:15 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:41:20 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:41:25 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:41:30 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:41:35 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:41:40 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:41:45 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:41:50 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:41:55 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:42:00 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:42:05 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:42:10 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:42:15 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:42:20 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:42:25 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:42:30 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:42:35 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:42:40 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:42:45 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:42:50 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:42:55 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:43:00 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:43:05 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:43:10 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:43:15 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:43:20 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:43:25 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:43:30 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:43:35 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:43:40 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:43:45 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:43:50 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:43:55 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:44:00 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:44:05 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:44:10 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:44:15 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:44:20 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:44:25 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1
+2020-09-08 18:44:30 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 127.0.0.1

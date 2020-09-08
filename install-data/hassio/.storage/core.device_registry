@@ -1,0 +1,51 @@
+{
+    "data": {
+        "deleted_devices": [],
+        "devices": [
+            {
+                "area_id": null,
+                "config_entries": [
+                    "fa822d2508b04b5aa6995657db13ac41"
+                ],
+                "connections": [],
+                "entry_type": null,
+                "id": "d6b9a03a7c8d449fa378bc3093b8bcd7",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "18215d92-4666-425a-b4db-2372f89daebd"
+                    ]
+                ],
+                "manufacturer": "rd1.by",
+                "model": "0.1",
+                "name": "1",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "fa822d2508b04b5aa6995657db13ac41"
+                ],
+                "connections": [],
+                "entry_type": null,
+                "id": "176c8d3ae2e240cf844978329f6bddfa",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "8d401260-b43a-42cb-bdb5-154de48bc6a1"
+                    ]
+                ],
+                "manufacturer": "rd1.by",
+                "model": "0.1",
+                "name": "2",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            }
+        ]
+    },
+    "key": "core.device_registry",
+    "version": 1
+}

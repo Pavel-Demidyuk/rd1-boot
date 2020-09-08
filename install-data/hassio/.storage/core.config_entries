@@ -2,12 +2,26 @@
     "data": {
         "entries": [
             {
+                "connection_class": "local_push",
+                "data": {},
+                "domain": "mqtt",
+                "entry_id": "fa822d2508b04b5aa6995657db13ac41",
+                "options": {},
+                "source": "import",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "configuration.yaml",
+                "unique_id": null,
+                "version": 1
+            },
+            {
                 "connection_class": "cloud_poll",
                 "data": {
                     "track_home": true
                 },
                 "domain": "met",
-                "entry_id": "7fe294020992447f887aec747a04a0b1",
+                "entry_id": "053e65f3dd1f49ff8f7fcfbc39a8d2c9",
                 "options": {},
                 "source": "onboarding",
                 "system_options": {

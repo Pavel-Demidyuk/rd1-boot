@@ -35,7 +35,7 @@
             },
             {
                 "capabilities": null,
-                "config_entry_id": "7fe294020992447f887aec747a04a0b1",
+                "config_entry_id": "053e65f3dd1f49ff8f7fcfbc39a8d2c9",
                 "device_class": null,
                 "device_id": null,
                 "disabled_by": null,
@@ -47,6 +47,38 @@
                 "platform": "met",
                 "supported_features": 0,
                 "unique_id": "home",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": "fa822d2508b04b5aa6995657db13ac41",
+                "device_class": null,
+                "device_id": "d6b9a03a7c8d449fa378bc3093b8bcd7",
+                "disabled_by": null,
+                "entity_id": "switch.1",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "1",
+                "platform": "mqtt",
+                "supported_features": 0,
+                "unique_id": "18215d92-4666-425a-b4db-2372f89daebd",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "fa822d2508b04b5aa6995657db13ac41",
+                "device_class": null,
+                "device_id": "176c8d3ae2e240cf844978329f6bddfa",
+                "disabled_by": null,
+                "entity_id": "light.2",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "2",
+                "platform": "mqtt",
+                "supported_features": 0,
+                "unique_id": "8d401260-b43a-42cb-bdb5-154de48bc6a1",
                 "unit_of_measurement": null
             }
         ]
