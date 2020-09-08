@@ -14,6 +14,6 @@ pip3 install homeassistant
 EOF
 cd /home/pi/rd1-boot
 #enable hassio service
-sudo cp /home/pi/rd1-boot/services/home-assistant@homeassistant.service /etc/systemd/system/
+sudo cp /home/pi/rd1-boot/install-data/home-assistant@homeassistant.service /etc/systemd/system/
 sudo systemctl --system daemon-reload
 sudo systemctl enable home-assistant@homeassistant
