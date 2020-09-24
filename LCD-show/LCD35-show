@@ -12,7 +12,7 @@ j=$(uname -n)
 if test "$var1" = "0"  -a "$1" != "lite" -a "$2" != "lite";then
 
 if test "$j" != "retropie" ;then
-sudo apt-get install xserver-xorg-input-evdev
+sudo apt-get install xserver-xorg-input-evdev --yes
 sudo cp -rf /usr/share/X11/xorg.conf.d/10-evdev.conf /usr/share/X11/xorg.conf.d/45-evdev.conf
 fi
 
@@ -21,7 +21,7 @@ sudo cp -rf ./nes /home/pi/RetroPie/roms/
 fi
 
 echo "1" > ./boot/mark
-sudo apt-get install cmake -y
+sudo apt-get install cmake --yes
 cd ./rpi-fbcp/build/
 sudo cmake ..
 sudo make

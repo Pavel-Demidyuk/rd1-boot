@@ -1,18 +1,4 @@
 #!/usr/bin/env bash
-# step 1: login to dietpi and setup internet connection
-# step 2: bash -c "$(wget --no-check-certificate https://cutt.ly/rd1-start && cat rd1-start)"
-
-
-
-#sudo su
-#RD1_STRING="#rd1 updates"
-#grep -q $RD1_STRING /boot/config.txt || ( \
-#echo $RD1_STRING >> /boot/config.txt && \
-#echo "dtparam=i2s=on" >> /boot/config.txt && \
-#echo "dtparam=spi=on" >> /boot/config.txt && \
-#echo "dtoverlay=piscreen,speed=16000000,rotate=90" >> /boot/config.txt && \
-#echo "dtparam=i2c_arm=on" >> /boot/config.txt)
-#su pi
 
 echo -e "\e[42m\n\n\n ---- Update RPI ---- \e[0m"
 sudo apt-get update --yes && sudo apt-get upgrade  --yes || exit 1
