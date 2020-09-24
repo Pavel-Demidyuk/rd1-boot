@@ -74,7 +74,7 @@ mkdir -p /home/pi/rd1-data/nodered/
 cp -r /home/pi/rd1-boot/install-data/nodered/data /home/pi/rd1-data/nodered/
 cp -r /home/pi/rd1-boot/install-data/homebridge /home/pi/rd1-data/homebridge
 sudo -u homeassistant mkdir -p /home/homeassistant/.homeassistant
-sudo -u homeassistant cp -r /home/pi/rd1-boot/install-data/hassio/* /home/homeassistant/.homeassistant
+sudo -u homeassistant cp -r /home/pi/rd1-boot/install-data/.homeassistant /home/homeassistant/
 
 echo -e "\e[42m\n\n\n ---- Register rd1 service ---- \n\e[0m"
 # register rd1 service
