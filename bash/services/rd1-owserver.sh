@@ -2,6 +2,7 @@
 #docker run -d --network=host -e I2C=ALL:ALL -e HTTP_ENABLED=true -v /dev:/dev --privileged=true --restart=always paveldemidyuk/rd1-owserver:arm
 name=rd1-owserver
 image=eu.gcr.io/rd1-build/$name:arm
+docker pull $image
 sudo docker stop $name && echo $name 'service stopped'
 sudo docker rm $name && echo $name 'service removed'
 #docker run -d --name=$name --network=host -e FAKE=DS2413,DS2413,DS2413,DS2406 -e HTTP_ENABLED=true -v /dev:/dev --privileged=true --restart=always paveldemidyuk/rd1-owserver:arm && echo 'service started'
