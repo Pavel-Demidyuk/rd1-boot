@@ -14,6 +14,7 @@ mkdir -p /home/pi/.config/lxsession/LXDE-pi/
 cp /home/pi/rd1-boot/install-data/autostart /home/pi/.config/lxsession/LXDE-pi/
 
 echo -e "\e[42m\n\n\n ---- Install DOCKER ---- \n\e[0m"
+sudo apt-get --fix-broken install --yes
 docker -v || (curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh)
 
 echo -e "\e[42m\n\n\n ---- Install Chromium ---- \n\e[0m"
@@ -25,13 +26,18 @@ echo -e "\e[42m\n\n\n ---- Install NPM ---- \n\e[0m"
 npm -v || (sudo apt-get install npm --yes)
 
 echo -e "\e[42m\n\n\n ---- Install RD1-DASHBOARD ---- \n\e[0m"
-# install npm
+# install rd1-dashboard
+cd /home/pi/
+wget --no-check-certificate https://github.com/Pavel-Demidyuk/rd1-dashboard/archive/master.zip  && mv master.zip dashboard.zip
+unzip dashboard.zip
+rm -rf dashboard.zip
+mv rd1-dashboard-master rd1-dashboard
 cd /home/pi/rd1-dashboard && sudo npm install -g npm@latest && npm install
 cd /home/pi/rd1-boot
 
-echo -e "\e[42m\n\n\n ---- Install FBI ---- \n\e[0m"
-#install fbi
-dpkg -s fbi || sudo apt-get install -y fbi
+#echo -e "\e[42m\n\n\n ---- Install FBI ---- \n\e[0m"
+##install fbi
+#dpkg -s fbi || sudo apt-get install -y fbi
 
 echo -e "\e[42m\n\n\n ---- Install Unclutter ---- \n\e[0m"
 #install unclutter
