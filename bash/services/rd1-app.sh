@@ -10,10 +10,11 @@ sudo docker run -d --name=$name \
 	-v /home/pi/rd1-data/homebridge/:/usr/src/app/configs/homebridge \
 	-e "NODE_ENV=prod" \
     -e "APP_PORT=5051" \
-    -e "DEBUG=boot,debug,app,db,warning,info,esp,homebridge,matcher" \
+#    -e "DEBUG=boot,debug,app,db,warning,info,esp,homebridge,matcher" \
+    -e "DEBUG=warning" \
     -e "DEVICE_MODEL=0.1" \
     -e "HASSIO_TOKEN_SECRET_NAME=hassio" \
-    -e "HOMEBRIDGE_CONFIG_UI_PORT=8080" \
+#    -e "HOMEBRIDGE_CONFIG_UI_PORT=8080" \
     -e "OWSERVER_HOST=127.0.0.1" \
     -e "OWSERVER_PORT=4304" \
     -e "POLLING_DISABLED=false" \
