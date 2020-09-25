@@ -12,10 +12,9 @@
 # 2. enable i2c
 # 3. [ INFO ] DietPi has detected an increased GPU memory is required for your installed software:
 
-rm -rf master* rd1*
+rm -rf master* rd1* boot*
 wget --no-check-certificate https://github.com/Pavel-Demidyuk/rd1-boot/archive/master.zip && mv master.zip boot.zip
-unzip boot.zip
-rm -rf boot.zip
+unzip boot.zip && rm -rf boot.zip
 mv rd1-boot-master rd1-boot
 chmod -R +x rd1-boot
 cd rd1-boot && ./install.sh
