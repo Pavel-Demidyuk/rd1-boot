@@ -7,7 +7,7 @@ sudo docker run -d --name=$name \
 	--network=host \
 	--restart=always \
 	--health-cmd='exit 0' \
-	--health-timeout=10s \
-	--health-retries=1 \
+	--health-timeout=20s \
+	--health-retries=3 \
 	--health-interval=10m \
 	$image && echo $name 'service started'
