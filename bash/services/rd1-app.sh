@@ -19,5 +19,5 @@ sudo docker run -d --name=$name \
     --health-cmd='rm -rf index.html && wget --spider -q http://localhost:5051/health && exit 0 || exit 1' \
 	--health-timeout=10s \
 	--health-retries=3 \
-	--health-interval=2m \
+	--health-interval=30s \
 	$image && echo $name 'service started'
