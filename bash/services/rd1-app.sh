@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 name=rd1-app
 image=eu.gcr.io/rd1-build/$name:arm
-docker pull $image
 sudo docker stop $name && echo $name 'service stopped'
 sudo docker kill $name && echo $name 'service killed'
 sudo docker rm $name && echo $name 'service removed'
