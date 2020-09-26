@@ -11,7 +11,7 @@ mv rd1-dashboard-master rd1-dashboard
 cd /home/pi/rd1-dashboard && sudo npm install -g npm@latest && npm install
 sudo docker pull eu.gcr.io/rd1-build/rd1-app:arm
 sudo docker pull eu.gcr.io/rd1-build/rd1-owserver:arm
-/home/pi/rd1-boot/services/rd1-owserver.sh
-/home/pi/rd1-boot/services/rd1-app.sh
+/home/pi/rd1-boot/bash/services/rd1-owserver.sh
+/home/pi/rd1-boot/bash/services/rd1-app.sh
 npm -s restart
 echo "done"
